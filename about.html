@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Local Services Hub</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(rgba(241, 247, 248, 0.9), rgba(248, 250, 250, 0.9)),
+        url('about-bg.jpg') no-repeat center center fixed;
+    background-size:cover;
+}
+
+
+/* Title */
+.title{
+    text-align:center;
+    padding:15px;
+    background:#0a3d62;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1e3799;
+    padding:12px 20px;
+}
+
+/* Desktop links */
+.nav-links{
+    display:none;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-right:20px;
+    font-size:16px;
+}
+
+/* Icons */
+.menu-icon{
+    font-size:22px;
+    color:white;
+    cursor:pointer;
+}
+
+/* Mobile menu */
+.menu{
+    display:none;
+    background:#1e3799;
+}
+
+.menu a{
+    display:block;
+    padding:12px;
+    color:white;
+    text-decoration:none;
+    border-top:1px solid rgba(255,255,255,0.2);
+}
+
+/* Content */
+.content{
+    padding:20px;
+    max-width:1450px;
+    margin:auto;
+    text-align:left;
+}
+
+.content h2{
+    color:#0a3d62;
+    margin-bottom:15px;
+}
+
+.content h3{
+    color:#1e3799;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.content p{
+    color:#333;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+.footer {
+  background: #0a3d62;
+  color: white;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* allows columns to wrap on small screens */
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-col h4 {
+  color: #ff7f50;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-col p, .footer-col a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #ff7f50;
+}
+
+.footer-col i {
+  margin-right: 6px;
+  color: #ff7f50;
+}
+
+/* Bottom copyright */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-col {
+    margin-bottom: 20px;
+  }
+}
+
+/* ===== DESKTOP VIEW ===== */
+@media (min-width:768px){
+    .menu-icon{
+        display:none;
+    }
+
+    .nav-links{
+        display:block;
+    }
+
+    .menu{
+        display:none !important;
+    }
+}
+</style>
+
+<script>
+function toggleMenu(){
+    var menu=document.getElementById("menu");
+    menu.style.display = (menu.style.display==="block") ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+
+<!-- Title -->
+<div class="title">Local Services Hub</div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Service</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<!-- Mobile Menu -->
+<div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="service.html">Service</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- About Content -->
+<div class="content">
+    <h2>About Local Services Hub</h2>
+    <p>
+        Local Services Hub is a platform designed to connect users with reliable 
+        and verified professionals for all their daily service needs. 
+        Our mission is to make service booking simple, fast, and trustworthy.
+    </p>
+
+    <h3>Our Mission</h3>
+    <p>
+        To provide a seamless platform where users can easily access skilled 
+        and verified service providers, ensuring quality and trust in every service.
+    </p>
+
+    <h3>Our Vision</h3>
+    <p>
+        To become the most trusted local services platform, connecting communities 
+        with professionals for home, personal, and business needs.
+    </p>
+
+    <h3>Our Values</h3>
+    <p>
+        <strong>Reliability:</strong> All services are verified and trustworthy.<br>
+        <strong>Convenience:</strong> Quick and easy booking process.<br>
+        <strong>Quality:</strong> Professional services with high standards.<br>
+        <strong>Customer Satisfaction:</strong> Ensuring a seamless experience.
+    </p>
+
+    <h3>How It Works</h3>
+    <p>
+        1. Browse through categories of services.<br>
+        2. Select a professional that meets your needs.<br>
+        3. Book the service directly through the platform.<br>
+        4. Enjoy reliable, verified service at your doorstep.
+    </p>
+
+    <h3>Why Choose Us?</h3>
+    <p>
+        Local Services Hub simplifies your life by offering a trustworthy, 
+        mobile-friendly, and user-friendly platform. 
+        We carefully vet all service providers so you get quality and peace of mind. 
+        With just a few clicks, you can book professionals for any service, anytime, anywhere.
+    </p>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Company Info -->
+    <div class="footer-col">
+      <h4>Local Services Hub</h4>
+      <p>Your trusted partner for home and professional services since 2025.</p>
+      <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+      <p><i class="fa-solid fa-envelope"></i> info@localserviceshub.com</p>
+      <p><i class="fa-solid fa-clock"></i> Mon - Sat: 9:00 AM - 8:00 PM</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="dis.html">Disclaimer</a>
+    </div>
+
+    <!-- Location & Policies -->
+    <div class="footer-col">
+      <h4>Location & Policies</h4>
+      <p><i class="fa-solid fa-location-dot"></i> 123 Main Street, City, Country</p>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="refund.html">Refund & Cancellation Policy</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Local Services Hub. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

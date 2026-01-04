@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Services Hub</title>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:linear-gradient(rgba(245,246,250,0.9), rgba(245,246,250,0.9)),
+        url('about-bg.jpg') no-repeat center center fixed;
+    background-size:cover;
+}
+
+/* Header */
+.header {
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:16px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* Navbar */
+.navbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1e3799;
+    padding:10px 15px;
+}
+
+.nav-links {
+    display:flex;
+    gap:10px;
+}
+
+.nav-links a {
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+}
+
+.menu-icon {
+    font-size:22px;
+    color:white;
+    cursor:pointer;
+    display:none;
+}
+
+/* Mobile Menu */
+.menu {
+    display:none;
+    flex-direction:column;
+    background:#1e3799;
+}
+.menu a {
+    color:white;
+    padding:10px;
+    text-decoration:none;
+    border-top:1px solid rgba(255,255,255,0.2);
+}
+.menu.show {
+    display:flex;
+}
+
+/* Services Section */
+.services {
+    padding:15px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.service-card {
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-card i {
+    font-size:36px;
+    color:#1e3799;
+    min-width:50px;
+    text-align:center;
+}
+
+.service-card .info {
+    flex:1;
+}
+
+.service-card h3 {
+    margin:0 0 5px 0;
+}
+
+.service-card p {
+    margin:0 0 5px 0;
+    font-size:14px;
+    color:#555;
+}
+
+.service-card .details {
+    font-size:13px;
+    color:#888;
+}
+
+.footer {
+  background: #0a3d62;
+  color: white;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* allows columns to wrap on small screens */
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-col h4 {
+  color: #ff7f50;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-col p, .footer-col a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #ff7f50;
+}
+
+.footer-col i {
+  margin-right: 6px;
+  color: #ff7f50;
+}
+
+/* Bottom copyright */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-col {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Responsive */
+@media(max-width:768px) {
+    .nav-links { display:none; }
+    .menu-icon { display:block; }
+    .services { grid-template-columns:1fr; }
+}
+
+@media(min-width:769px) {
+    .menu { display:none !important; }
+    .services { grid-template-columns: repeat(2,1fr); }
+}
+
+@media(min-width:1024px) {
+    .services { grid-template-columns: repeat(3,1fr); }
+}
+</style>
+
+<script>
+function toggleMenu() {
+    document.getElementById('menu').classList.toggle('show');
+}
+</script>
+
+</head>
+<body>
+
+<div class="header">Local Services Hub</div>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Service</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+</div>
+
+<!-- Mobile Menu -->
+<div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="service.html">Service</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- Services Section -->
+<div class="services">
+
+    <div class="service-card">
+        <i class="fa fa-bolt"></i>
+        <div class="info">
+            <h3>Electrician</h3>
+            <p>We provide wiring, electrical repairs, installation of lights, switches, and home appliances safely and efficiently.</p>
+            <div class="details">Starting from ₹500 | Area: Citywide</div>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <i class="fa fa-tint"></i>
+        <div class="info">
+            <h3>Plumber</h3>
+            <p>Professional plumbing services including pipe fitting, leak repairs, bathroom & kitchen plumbing maintenance.</p>
+            <div class="details">Starting from ₹400 | Area: Citywide</div>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <i class="fa fa-broom"></i>
+        <div class="info">
+            <h3>Cleaning</h3>
+            <p>Deep cleaning for homes, offices, and commercial spaces. We handle dusting, mopping, and sanitation professionally.</p>
+            <div class="details">Starting from ₹300 | Area: Citywide</div>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <i class="fa fa-paint-roller"></i>
+        <div class="info">
+            <h3>Painter</h3>
+            <p>High-quality painting services for interior and exterior walls, using premium paints and tools.</p>
+            <div class="details">Starting from ₹800 | Area: Citywide</div>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <i class="fa fa-wrench"></i>
+        <div class="info">
+            <h3>Mechanic</h3>
+            <p>Vehicle repair, servicing, and maintenance for cars, bikes, and other vehicles with experienced mechanics.</p>
+            <div class="details">Starting from ₹1000 | Area: Citywide</div>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <i class="fa fa-scissors"></i>
+        <div class="info">
+            <h3>Salon at Home</h3>
+            <p>Haircuts, styling, beauty and grooming services delivered at your home by trained professionals.</p>
+            <div class="details">Starting from ₹500 | Area: Citywide</div>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <i class="fa fa-car"></i>
+        <div class="info">
+            <h3>Driver</h3>
+            <p>Reliable drivers for personal and commercial use. Available for hourly or daily services.</p>
+            <div class="details">Starting from ₹1200 | Area: Citywide</div>
+        </div>
+    </div>
+
+    <div class="service-card">
+        <i class="fa fa-user-shield"></i>
+        <div class="info">
+            <h3>Security Guard</h3>
+            <p>Professional security services for home, office, and events. Trained personnel ensuring safety.</p>
+            <div class="details">Starting from ₹700 | Area: Citywide</div>
+        </div>
+    </div>
+
+</div>
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Company Info -->
+    <div class="footer-col">
+      <h4>Local Services Hub</h4>
+      <p>Your trusted partner for home and professional services since 2025.</p>
+      <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+      <p><i class="fa-solid fa-envelope"></i> info@localserviceshub.com</p>
+      <p><i class="fa-solid fa-clock"></i> Mon - Sat: 9:00 AM - 8:00 PM</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="dis.html">Disclaimer</a>
+    </div>
+
+    <!-- Location & Policies -->
+    <div class="footer-col">
+      <h4>Location & Policies</h4>
+      <p><i class="fa-solid fa-location-dot"></i> 123 Main Street, City, Country</p>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="refund.html">Refund & Cancellation Policy</a>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Local Services Hub. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

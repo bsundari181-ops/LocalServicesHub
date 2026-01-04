@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Local Services Hub</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* General Body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:linear-gradient(rgba(245,246,250,0.9), rgba(245,246,250,0.9)),
+        url('about-bg.jpg') no-repeat center center fixed;
+    background-size:cover;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    background: #0a3d62;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e3799;
+    padding: 12px 20px;
+}
+.nav-links {
+    display: none;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.menu-icon {
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Menu */
+.menu {
+    display: none;
+    flex-direction: column;
+    background: #1e3799;
+}
+.menu a {
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+.menu.show { display: flex; }
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-left, .contact-right {
+    background: #1e3799;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-left h3, .contact-right h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-left p, .contact-right p {
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Centered Icons */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    text-decoration: none;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-icons a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.phone { background: #0a3d62; }
+.whatsapp { background: #25D366; }
+.instagram { background: #C13584; }
+
+.footer {
+  background: #0a3d62;
+  color: white;
+  padding: 40px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* allows columns to wrap on small screens */
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-col h4 {
+  color: #ff7f50;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-col p, .footer-col a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 14px;
+}
+
+.footer-col a:hover {
+  color: #ff7f50;
+}
+
+.footer-col i {
+  margin-right: 6px;
+  color: #ff7f50;
+}
+
+/* Bottom copyright */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-col {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* Responsive */
+@media(min-width:768px){
+    .nav-links { display: flex; }
+    .menu-icon { display: none; }
+    .contact-container { flex-direction: row; gap: 20px; }
+    .contact-left, .contact-right { flex: 1; }
+}
+</style>
+
+<script>
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+}
+</script>
+</head>
+<body>
+
+<div class="header">Local Services Hub</div>
+
+<div class="navbar">
+    <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="service.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="service.html">Services</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- Contact Section -->
+<div class="contact-container">
+    <!-- Left: Company Address -->
+    <div class="contact-left">
+        <h3>Our Address</h3>
+        <p>
+            Local Services Hub<br>
+            123 Main Street<br>
+            City Name, PIN 123456<br>
+            Email: info@localserviceshub.com
+        </p>
+        <div class="contact-icons">
+            <a href="tel:+919025124366" class="phone"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://wa.me/919025124366" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://instagram.com/yourprofile" class="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <!-- Right: Customer Contact -->
+    <div class="contact-right">
+        <h3>Customer Service</h3>
+        <p>
+            Have questions? Reach out to us anytime!<br>
+            Phone: +91 9876543210<br>
+            WhatsApp: +91 9876543210<br>
+            Instagram: @localserviceshub
+        </p>
+        <div class="contact-icons">
+            <a href="tel:+919025124366" class="phone"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://wa.me/91902512436" class="whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://instagram.com/yourprofile" class="instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Company Info -->
+    <div class="footer-col">
+      <h4>Local Services Hub</h4>
+      <p>Your trusted partner for home and professional services since 2025.</p>
+      <p><i class="fa-solid fa-phone"></i> +91 9876543210</p>
+      <p><i class="fa-solid fa-envelope"></i> info@localserviceshub.com</p>
+      <p><i class="fa-solid fa-clock"></i> Mon - Sat: 9:00 AM - 8:00 PM</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+    </div>
+
+    <!-- Location & Policies -->
+    <div class="footer-col">
+      <h4>Location & Policies</h4>
+      <p><i class="fa-solid fa-location-dot"></i> 123 Main Street, City, Country</p>
+      <a href="Terms & Conditions.html">Terms & Conditions</a>
+      <a href="Privacy Policy.html">Privacy Policy</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="refund.html">Refund & Cancellation Policy</a>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Local Services Hub. All rights reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>

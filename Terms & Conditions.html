@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Terms & Conditions | Local Services Hub</title>
+<meta name="description" content="Read the terms and conditions of Local Services Hub regarding service usage, bookings, responsibilities, and policies.">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f6fa;
+}
+
+/* Header */
+.title{
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:15px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1e3799;
+    padding:12px 20px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-right:18px;
+    font-size:15px;
+}
+
+.menu-icon{
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+}
+
+/* Mobile menu */
+.menu{
+    display:none;
+    background:#1e3799;
+}
+.menu a{
+    display:block;
+    padding:12px;
+    color:white;
+    text-decoration:none;
+    border-top:1px solid rgba(255,255,255,0.2);
+}
+
+/* Content */
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:30px 20px;
+    background:white;
+}
+
+.container h2{
+    color:#0a3d62;
+    margin-bottom:15px;
+}
+
+.container h3{
+    color:#1e3799;
+    margin-top:25px;
+}
+
+.container p, .container li{
+    line-height:1.7;
+    color:#444;
+    font-size:15px;
+}
+
+.container ul{
+    margin-left:20px;
+}
+
+/* Footer */
+footer{
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .menu-icon{display:block;}
+    .nav-links{display:none;}
+}
+</style>
+
+<script>
+function toggleMenu(){
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+
+<div class="title">Local Services Hub</div>
+
+<div class="navbar">
+    <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+
+    </div>
+</div>
+
+<div class="menu" id="menu">
+    <a href="index.html">Home</a>
+
+</div>
+
+<div class="container">
+    <h2>Terms & Conditions</h2>
+    <p>
+        Welcome to <strong>Local Services Hub</strong>. By accessing or using our website and services,
+        you agree to comply with and be bound by the following terms and conditions.
+        Please read them carefully.
+    </p>
+
+    <h3>1. Service Platform</h3>
+    <p>
+        Local Services Hub is an online platform that connects users with independent service providers
+        such as electricians, plumbers, cleaners, and other professionals.
+        We do not directly provide the services.
+    </p>
+
+    <h3>2. User Responsibilities</h3>
+    <ul>
+        <li>You must provide accurate and complete information during booking.</li>
+        <li>You agree to use the platform only for lawful purposes.</li>
+        <li>You are responsible for verifying service details before confirming a booking.</li>
+    </ul>
+
+    <h3>3. Service Provider Responsibility</h3>
+    <p>
+        Service providers are independent professionals responsible for the quality,
+        safety, and completion of their services. Local Services Hub is not liable
+        for actions or omissions of service providers.
+    </p>
+
+    <h3>4. Payments & Charges</h3>
+    <p>
+        Payment terms, service charges, and additional costs are agreed upon
+        between the user and the service provider. Local Services Hub does not
+        guarantee pricing unless explicitly mentioned.
+    </p>
+
+    <h3>5. Cancellations</h3>
+    <p>
+        Users may cancel bookings as per the cancellation policy mentioned at the time of booking.
+        Repeated cancellations may lead to account restrictions.
+    </p>
+
+    <h3>6. Limitation of Liability</h3>
+    <p>
+        Local Services Hub shall not be liable for any direct, indirect, incidental,
+        or consequential damages arising from the use of services or the website.
+    </p>
+
+    <h3>7. Account Suspension</h3>
+    <p>
+        We reserve the right to suspend or terminate user access if these terms
+        are violated or misuse of the platform is detected.
+    </p>
+
+    <h3>8. Intellectual Property</h3>
+    <p>
+        All website content, logos, text, and design are the intellectual property
+        of Local Services Hub and may not be reused without permission.
+    </p>
+
+    <h3>9. Changes to Terms</h3>
+    <p>
+        Local Services Hub reserves the right to update or modify these terms at any time.
+        Continued use of the platform implies acceptance of revised terms.
+    </p>
+
+    <h3>10. Contact Information</h3>
+    <p>
+        If you have any questions regarding these Terms & Conditions,
+        please contact us through the <a href="contact.html">Contact Page</a>.
+    </p>
+</div>
+
+<footer>
+    © 2025 Local Services Hub. All rights reserved.
+</footer>
+
+</body>
+</html>

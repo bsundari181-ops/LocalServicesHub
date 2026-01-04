@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title id="pageTitle">Blog | Local Services Hub</title>
+<meta name="description" id="metaDesc" content="">
+<link rel="canonical" id="canonicalUrl" href="">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(rgba(245,246,250,0.95), rgba(245,246,250,0.95)),
+  url('about-bg.jpg') no-repeat center center fixed;
+  background-size:cover;
+}
+
+/* Title */
+.title{
+  text-align:center;
+  padding:15px;
+  background:#0a3d62;
+  color:white;
+  font-size:22px;
+  font-weight:bold;
+}
+
+/* Navbar */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#1e3799;
+  padding:12px 20px;
+}
+.nav-links{display:none;}
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  margin-right:20px;
+  font-size:16px;
+}
+.menu-icon{
+  font-size:22px;
+  color:white;
+  cursor:pointer;
+}
+
+/* Mobile Menu */
+.menu{
+  display:none;
+  background:#1e3799;
+}
+.menu a{
+  display:block;
+  padding:12px;
+  color:white;
+  text-decoration:none;
+  border-top:1px solid rgba(255,255,255,0.2);
+}
+
+/* Blog Layout */
+.container{
+  max-width:1400px;
+  margin:auto;
+  padding:20px;
+  display:grid;
+  grid-template-columns:3fr 1fr;
+  gap:25px;
+}
+.blog{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+}
+.blog img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:8px;
+}
+.blog h1{
+  color:#0a3d62;
+  margin-top:20px;
+}
+.blog h3{
+  color:#1e3799;
+  margin-top:25px;
+}
+.blog p, .blog li{
+  color:#333;
+  line-height:1.7;
+}
+.blog ul{padding-left:20px;}
+
+/* Sidebar */
+.sidebar{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+}
+.sidebar h3{
+  color:#0a3d62;
+  margin-bottom:15px;
+}
+.sidebar a{
+  display:block;
+  text-decoration:none;
+  color:#333;
+  margin-bottom:10px;
+  font-size:14px;
+}
+.sidebar a:hover{color:#ff7f50;}
+
+/* Footer */
+
+footer{background:#0a3d62;color:white;text-align:center;padding:15px;margin-top:30px;}
+
+
+/* Responsive */
+@media(max-width:768px){
+  .container{grid-template-columns:1fr;}
+}
+@media(min-width:768px){
+  .menu-icon{display:none;}
+  .nav-links{display:block;}
+  .menu{display:none!important;}
+}
+</style>
+
+<script>
+function toggleMenu(){
+  let menu=document.getElementById("menu");
+  menu.style.display=(menu.style.display==="block")?"none":"block";
+}
+</script>
+</head>
+
+<body>
+
+<div class="title">Local Services Hub</div>
+
+<div class="navbar">
+  <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+
+  </div>
+</div>
+
+<div class="menu" id="menu">
+  <a href="index.html">Home</a>
+
+</div>
+
+<div class="container">
+  <article class="blog">
+    <img id="blogImg" src="">
+    <h1 id="blogTitle"></h1>
+    <div id="blogContent"></div>
+  </article>
+
+  <aside class="sidebar">
+    <h3>Service Blogs</h3>
+    <a href="?service=electrician">Electrician</a>
+    <a href="?service=plumber">Plumber</a>
+    <a href="?service=cleaning">Cleaning</a>
+    <a href="?service=painter">Painter</a>
+    <a href="?service=carpenter">Carpenter</a>
+    <a href="?service=ac">AC Technician</a>
+    <a href="?service=mechanic">Mechanic</a>
+    <a href="?service=gardener">Gardener</a>
+    <a href="?service=babysitter">Baby Sitter</a>
+    <a href="?service=tutor">Tutor</a>
+    <a href="?service=security">Security</a>
+    <a href="?service=driver">Driver</a>
+    <a href="?service=laundry">Laundry</a>
+    <a href="?service=cook">Cook</a>
+    <a href="?service=salon">Salon</a>
+    <a href="?service=delivery">Delivery</a>
+  </aside>
+</div>
+
+<footer>
+    © 2025 Local Services Hub. All rights reserved.
+  
+</footer>
+
+<script>
+const blogs = {
+
+electrician:{
+ title:"Professional Electrician Services for Safe & Reliable Homes",
+ img:"electrician.jpg",
+ desc:"Detailed guide on electrician services, safety tips, and why professional electricians are important.",
+ content:`
+ <p>Electrician services are essential for maintaining safety and efficiency in residential and commercial properties. Professional electricians handle electrical installations, repairs, and maintenance with precision.</p>
+
+ <h3>Services Offered by Electricians</h3>
+ <ul>
+  <li>New wiring and rewiring</li>
+  <li>Switchboard installation</li>
+  <li>Electrical fault repair</li>
+  <li>Lighting installation</li>
+ </ul>
+
+ <h3>Why Hire Professional Electricians</h3>
+ <p>Certified electricians follow safety standards, reduce fire risks, and ensure long-term reliability of electrical systems.</p>
+ `
+},
+
+plumber:{
+ title:"Plumber Services – Complete Plumbing Solutions",
+ img:"plumber.jpg",
+ desc:"Understand plumbing services, common water issues, and professional solutions.",
+ content:`
+ <p>Plumbing systems are crucial for daily living. Professional plumbers ensure proper water flow, drainage, and leak-free systems.</p>
+
+ <h3>Common Plumbing Problems</h3>
+ <ul>
+  <li>Leaking pipes</li>
+  <li>Blocked drains</li>
+  <li>Low water pressure</li>
+ </ul>
+
+ <h3>Benefits of Professional Plumbers</h3>
+ <p>Expert plumbers prevent property damage and provide long-lasting plumbing solutions.</p>
+ `
+},
+
+cleaning:{
+ title:"Professional Cleaning Services for Homes & Offices",
+ img:"cleaning.jpg",
+ desc:"Benefits of professional cleaning services for hygiene and comfort.",
+ content:`
+ <p>Professional cleaning services help maintain a hygienic and healthy environment for homes and offices.</p>
+
+ <h3>Cleaning Services Include</h3>
+ <ul>
+  <li>Deep home cleaning</li>
+  <li>Office cleaning</li>
+  <li>Kitchen & bathroom sanitation</li>
+ </ul>
+
+ <h3>Why Choose Professional Cleaning</h3>
+ <p>Trained cleaners use proper tools and methods to ensure complete cleanliness.</p>
+ `
+},
+
+painter:{
+ title:"Painting Services – Enhance Your Home Appearance",
+ img:"painter.jpg",
+ desc:"Professional painting services for interior and exterior spaces.",
+ content:`
+ <p>Painting enhances the beauty and protection of walls. Professional painters deliver smooth finishes and long-lasting results.</p>
+
+ <h3>Types of Painting Services</h3>
+ <ul>
+  <li>Interior painting</li>
+  <li>Exterior painting</li>
+  <li>Waterproof coating</li>
+ </ul>
+
+ <h3>Importance of Professional Painting</h3>
+ <p>Expert surface preparation ensures durability and perfect finishing.</p>
+ `
+},
+
+carpenter:{
+ title:"Carpenter Services – Furniture & Woodwork Experts",
+ img:"carpenter.jpg",
+ desc:"Complete guide to carpenter services for furniture and woodwork.",
+ content:`
+ <p>Carpenters provide functional and aesthetic woodwork solutions for homes and offices.</p>
+
+ <h3>Common Carpenter Services</h3>
+ <ul>
+  <li>Furniture repair</li>
+  <li>Custom woodwork</li>
+  <li>Door & cupboard installation</li>
+ </ul>
+
+ <h3>Why Skilled Carpenters Matter</h3>
+ <p>Professional carpenters ensure durability, precision, and quality finishing.</p>
+ `
+},
+
+ac:{
+ title:"AC Technician Services – Installation, Repair & Maintenance",
+ img:"ac.jpg",
+ desc:"Professional AC services to ensure efficient cooling and energy savings.",
+ content:`
+ <p>Air conditioner technicians handle installation, servicing, gas refilling, and repairs.</p>
+
+ <h3>Common AC Services</h3>
+ <ul>
+  <li>AC installation & uninstallation</li>
+  <li>Gas refilling</li>
+  <li>Routine servicing</li>
+ </ul>
+
+ <h3>Benefits of Regular AC Maintenance</h3>
+ <p>Regular servicing improves cooling efficiency and extends AC lifespan.</p>
+ `
+},
+
+mechanic:{
+ title:"Mechanic Services – Vehicle Repair & Maintenance",
+ img:"mechanic.jpg",
+ desc:"Professional mechanic services for vehicle safety and performance.",
+ content:`
+ <p>Mechanics ensure vehicles run smoothly by diagnosing and repairing mechanical issues.</p>
+
+ <h3>Services Provided</h3>
+ <ul>
+  <li>Engine repair</li>
+  <li>Brake service</li>
+  <li>Battery replacement</li>
+ </ul>
+
+ <h3>Why Regular Servicing Matters</h3>
+ <p>Timely servicing prevents breakdowns and improves fuel efficiency.</p>
+ `
+},
+
+gardener:{
+ title:"Gardening Services – Lawn & Plant Care",
+ img:"gardener.jpg",
+ desc:"Professional gardening services for healthy and attractive outdoor spaces.",
+ content:`
+ <p>Gardeners maintain lawns, plants, and landscapes to improve outdoor appearance.</p>
+
+ <h3>Gardening Services</h3>
+ <ul>
+  <li>Lawn maintenance</li>
+  <li>Plant care</li>
+  <li>Tree trimming</li>
+ </ul>
+
+ <h3>Benefits of Gardening</h3>
+ <p>Well-maintained gardens improve air quality and property value.</p>
+ `
+},
+
+babysitter:{
+ title:"Babysitter Services – Safe & Caring Child Support",
+ img:"babysitter.jpg",
+ desc:"Trusted babysitter services ensuring child safety and comfort.",
+ content:`
+ <p>Babysitters provide responsible child supervision and care.</p>
+
+ <h3>Babysitter Responsibilities</h3>
+ <ul>
+  <li>Child supervision</li>
+  <li>Feeding assistance</li>
+  <li>Safe environment</li>
+ </ul>
+
+ <h3>Why Choose Verified Babysitters</h3>
+ <p>Background-verified babysitters ensure child safety.</p>
+ `
+},
+
+tutor:{
+ title:"Tutor Services – Academic Support at Home",
+ img:"tutor.jpg",
+ desc:"Professional tutoring services for academic improvement.",
+ content:`
+ <p>Home tutors provide personalized learning and exam preparation.</p>
+
+ <h3>Subjects Covered</h3>
+ <ul>
+  <li>Maths</li>
+  <li>Science</li>
+  <li>Languages</li>
+ </ul>
+
+ <h3>Benefits of Home Tuition</h3>
+ <p>One-on-one teaching improves understanding and confidence.</p>
+ `
+},
+
+security:{
+ title:"Security Services – Protecting Homes & Businesses",
+ img:"security.jpg",
+ desc:"Professional security services for safety and protection.",
+ content:`
+ <p>Security personnel ensure safety by monitoring and preventing unauthorized access.</p>
+
+ <h3>Security Services Include</h3>
+ <ul>
+  <li>Residential security</li>
+  <li>Commercial security</li>
+  <li>Event security</li>
+ </ul>
+
+ <h3>Importance of Security Planning</h3>
+ <p>Proper security reduces risks and improves safety.</p>
+ `
+},
+
+driver:{
+ title:"Driver Services – Safe & Reliable Transportation",
+ img:"driver.jpg",
+ desc:"Professional driver services for personal and commercial travel.",
+ content:`
+ <p>Experienced drivers ensure safe and timely transportation.</p>
+
+ <h3>Types of Driver Services</h3>
+ <ul>
+  <li>Personal drivers</li>
+  <li>Outstation drivers</li>
+  <li>Corporate drivers</li>
+ </ul>
+
+ <h3>Why Hire Professional Drivers</h3>
+ <p>Verified drivers ensure comfort and safety.</p>
+ `
+},
+
+laundry:{
+ title:"Laundry Services – Fabric Care & Hygiene",
+ img:"laundry.jpg",
+ desc:"Professional laundry services for clean and hygienic clothes.",
+ content:`
+ <p>Laundry services handle washing, drying, and ironing efficiently.</p>
+
+ <h3>Laundry Services Offered</h3>
+ <ul>
+  <li>Washing & drying</li>
+  <li>Ironing</li>
+  <li>Stain removal</li>
+ </ul>
+
+ <h3>Benefits of Professional Laundry</h3>
+ <p>Saves time and preserves fabric quality.</p>
+ `
+},
+
+cook:{
+ title:"Cook Services – Healthy Home-Cooked Meals",
+ img:"cook.jpg",
+ desc:"Professional home cook services for nutritious meals.",
+ content:`
+ <p>Home cooks prepare meals according to family preferences.</p>
+
+ <h3>Cook Services Include</h3>
+ <ul>
+  <li>Daily cooking</li>
+  <li>Event cooking</li>
+  <li>Diet-specific meals</li>
+ </ul>
+
+ <h3>Why Hire a Cook</h3>
+ <p>Saves time and ensures healthy eating.</p>
+ `
+},
+
+salon:{
+ title:"Salon at Home – Beauty & Grooming Services",
+ img:"salon.jpg",
+ desc:"Professional salon services at home for convenience.",
+ content:`
+ <p>Salon professionals provide beauty and grooming services at home.</p>
+
+ <h3>Salon Services</h3>
+ <ul>
+  <li>Haircut & styling</li>
+  <li>Facial & makeup</li>
+  <li>Grooming services</li>
+ </ul>
+
+ <h3>Benefits of Salon at Home</h3>
+ <p>Convenient, hygienic, and time-saving.</p>
+ `
+},
+
+delivery:{
+ title:"Delivery Services – Fast & Reliable Logistics",
+ img:"delivery.jpg",
+ desc:"Professional delivery services for goods and parcels.",
+ content:`
+ <p>Delivery services ensure timely transportation of goods.</p>
+
+ <h3>Types of Delivery Services</h3>
+ <ul>
+  <li>Local delivery</li>
+  <li>Same-day delivery</li>
+  <li>Business logistics</li>
+ </ul>
+
+ <h3>Why Choose Professional Delivery</h3>
+ <p>Safe handling and timely delivery.</p>
+ `
+}
+
+};
+
+
+
+
+const params=new URLSearchParams(window.location.search);
+const service=params.get("service")||"electrician";
+const blog=blogs[service];
+
+document.getElementById("blogTitle").innerText=blog.title;
+document.getElementById("blogImg").src=blog.img;
+document.getElementById("blogContent").innerHTML=blog.content;
+document.getElementById("pageTitle").innerText=blog.title+" | Local Services Hub";
+document.getElementById("metaDesc").content=blog.desc;
+document.getElementById("canonicalUrl").href=window.location.href;
+</script>
+
+</body>
+</html>

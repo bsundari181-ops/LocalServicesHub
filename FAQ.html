@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FAQ | Local Services Hub</title>
+<meta name="description" content="Frequently Asked Questions about electrician, plumber, cleaning, AC service, booking, pricing and safety.">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f5f6fa;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#1e3799;
+  padding:12px 20px;
+}
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  margin-right:20px;
+  padding-bottom:4px;
+}
+.nav-links a.active{
+  color:#ff7f50;
+  border-bottom:2px solid #ff7f50;
+  font-weight:bold;
+}
+.menu-icon,.login-icon{
+  color:white;
+  font-size:22px;
+  cursor:pointer;
+}
+.menu{
+  display:none;
+  flex-direction:column;
+  background:#1e3799;
+}
+.menu a{
+  color:white;
+  padding:12px;
+  text-decoration:none;
+  border-top:1px solid rgba(255,255,255,0.2);
+}
+.menu.show{display:flex}
+
+/* ===== HERO ===== */
+.hero{
+  background:linear-gradient(120deg,#1e3799,#0a3d62);
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{
+  max-width:1100px;
+  margin:15px auto;
+  padding:0 20px;
+  font-size:14px;
+}
+.breadcrumb a{
+  color:#1e3799;
+  text-decoration:none;
+}
+.breadcrumb span{color:#555;}
+
+/* ===== FAQ ===== */
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+.faq-item{
+  background:white;
+  border-radius:8px;
+  margin-bottom:12px;
+  overflow:hidden;
+}
+.faq-question{
+  padding:15px;
+  background:#eef2ff;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-weight:bold;
+}
+.faq-answer{
+  display:none;
+  padding:15px;
+  color:#444;
+  line-height:1.6;
+}
+.faq-item.active .faq-answer{display:block;}
+.faq-item.active .faq-question i{transform:rotate(180deg);}
+
+/* ===== FOOTER ===== */
+footer{
+  background:#0a3d62;
+  color:white;
+  text-align:center;
+  padding:15px;
+  margin-top:30px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(min-width:768px){
+  .menu-icon{display:none;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="index.html" id="nav-home">Home</a>
+
+  </div>
+  <div>
+    <i class="fa-solid fa-bars menu-icon" onclick="toggleMenu()"></i>
+    <a href="login.html"><i class="fa-solid fa-user login-icon"></i></a>
+  </div>
+</nav>
+
+<div class="menu" id="menu">
+  <a href="index.html">Home</a>
+
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Frequently Asked Questions</h1>
+  <p>Everything you need to know about our services</p>
+</section>
+
+
+
+<!-- FAQ CONTENT -->
+<div class="container">
+
+  <div class="faq-item">
+    <div class="faq-question">
+      How do I book a service?
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+    <div class="faq-answer">
+      You can book any service directly from our website using the Book button or via WhatsApp.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      Are your service professionals verified?
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+    <div class="faq-answer">
+      Yes, all our professionals are verified, experienced, and background checked.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      What services do you provide?
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+    <div class="faq-answer">
+      We provide electrician, plumber, cleaning, painter, carpenter, AC technician, mechanic, gardener,
+      baby sitter, tutor, security, driver, laundry, cook, salon and delivery services.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      How is pricing decided?
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+    <div class="faq-answer">
+      Pricing depends on service type, duration, and location. Transparent pricing is shared before booking.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">
+      Is customer support available?
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+    <div class="faq-answer">
+      Yes, our support team is available Monday to Saturday, 9 AM – 8 PM.
+    </div>
+  </div>
+  <!-- FAQ ITEM -->
+<div class="faq-item">
+  <div class="faq-question">
+    Do you provide services in my area?
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="faq-answer">
+    Yes, we provide services in selected locations. Please check availability by entering your area or contacting our support team.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    Can I book a service for a future date?
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="faq-answer">
+    Yes, you can easily schedule services for a future date and time as per your convenience.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    Are your service professionals verified?
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="faq-answer">
+    All our professionals are background-verified, trained, and experienced in their respective services.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    What services do you offer?
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="faq-answer">
+    We offer electrician, plumber, cleaning, painter, carpenter, AC technician, mechanic, gardener,
+    babysitter, tutor, security, driver, laundry, cook, salon, and delivery services.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    How is the service price calculated?
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="faq-answer">
+    Pricing depends on service type, work duration, and materials used. The estimated cost is shared before confirmation.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    What payment methods are accepted?
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="faq-answer">
+    We accept cash, UPI, and other digital payment options depending on the service.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    Can I cancel or reschedule my booking?
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="faq-answer">
+    Yes, bookings can be cancelled or rescheduled before the service starts. Cancellation terms may apply.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    Is customer support available?
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="faq-answer">
+    Yes, our customer support team is available via phone and WhatsApp during working hours.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    Do you provide emergency services?
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="faq-answer">
+    Emergency services are available for selected categories like electrician and plumbing, subject to availability.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    Is there any service warranty?
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+  <div class="faq-answer">
+    Some services include a limited service warranty. Details will be shared at the time of booking.
+  </div>
+</div>
+
+
+</div>
+
+<footer>
+  © 2025 Local Services Hub. All rights reserved.
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("show");
+}
+
+document.querySelectorAll(".faq-question").forEach(q=>{
+  q.addEventListener("click",()=>{
+    q.parentElement.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>
